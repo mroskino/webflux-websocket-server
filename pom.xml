@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.mroskino.play</groupId>
-    <artifactId>websocketserver</artifactId>
+    <artifactId>websocket-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>websocketserver</name>
+    <name>websocket-server</name>
     <description>Websocket server</description>
     <properties>
         <java.version>11</java.version>
