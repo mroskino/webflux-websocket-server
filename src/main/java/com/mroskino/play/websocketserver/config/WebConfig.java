@@ -1,6 +1,6 @@
 package com.mroskino.play.websocketserver.config;
 
-import com.mroskino.play.websocketserver.handler.TestWebsocketHandler;
+import com.mroskino.play.websocketserver.handler.EchoWebsocketHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.HandlerMapping;
@@ -16,9 +16,14 @@ import java.util.Map;
 public class WebConfig {
 
     @Bean
+    public EchoWebsocketHandler echoWebsocketHandler() {
+        return new EchoWebsocketHandler();
+    }
+
+    @Bean
     public HandlerMapping handlerMapping() {
-        Map<String, WebSocketHandler> map = new HashMap<>();
-        map.put("/test", new TestWebsocketHandler());
+        Map<String, WebSocketHandler> map = new HashMap<>(1);
+        map.put("/test", echoWebsocketHandler());
         return new SimpleUrlHandlerMapping(map, -1);
     }
 }

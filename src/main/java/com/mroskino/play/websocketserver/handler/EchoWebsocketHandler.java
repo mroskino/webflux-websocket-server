@@ -6,14 +6,12 @@ import org.springframework.web.reactive.socket.WebSocketSession;
 import reactor.core.publisher.Mono;
 
 @Slf4j
-public class TestWebsocketHandler implements WebSocketHandler {
+public class EchoWebsocketHandler implements WebSocketHandler {
 
     @Override
     public Mono<Void> handle(WebSocketSession session) {
         return session.send(session.receive()
-                .doOnNext(message -> {
-                    log.info("Received message: {}", message.getPayloadAsText());
-                })
+                .doOnNext(message -> log.info("Received message: {}", message.getPayloadAsText()))
                 .map(value -> session.textMessage("Echo " + value.getPayloadAsText())));
     }
 }
