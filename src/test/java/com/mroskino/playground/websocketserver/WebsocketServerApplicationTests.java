@@ -1,4 +1,4 @@
-package com.mroskino.play.websocketserver;
+package com.mroskino.playground.websocketserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

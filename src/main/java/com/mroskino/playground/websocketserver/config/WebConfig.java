@@ -1,6 +1,6 @@
-package com.mroskino.play.websocketserver.config;
+package com.mroskino.playground.websocketserver.config;
 
-import com.mroskino.play.websocketserver.handler.EchoWebsocketHandler;
+import com.mroskino.playground.websocketserver.handler.EchoWebsocketHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.HandlerMapping;

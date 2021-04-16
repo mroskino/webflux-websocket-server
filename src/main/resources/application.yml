@@ -1,2 +1,5 @@
 server:
   port: 8090
+
+echo:
+  response-delay: 1000

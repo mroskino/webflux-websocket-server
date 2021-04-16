@@ -1,4 +1,4 @@
-package com.mroskino.play.websocketserver;
+package com.mroskino.playground.websocketserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
