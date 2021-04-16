@@ -8,11 +8,11 @@
         <version>2.4.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.mroskino.play</groupId>
-    <artifactId>websocket-server</artifactId>
+    <groupId>com.mroskino.playground</groupId>
+    <artifactId>webflux-websocket-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>websocket-server</name>
-    <description>Websocket server</description>
+    <name>webflux-websocket-server</name>
+    <description>Webflux WebSocket server</description>
     <properties>
         <java.version>11</java.version>
     </properties>
