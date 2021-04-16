@@ -16,9 +16,13 @@ public class EchoWebsocketHandler implements WebSocketHandler {
     @Value("${echo.response-delay}")
     private Long responseDelay;
 
+    @Value("${echo.idle-timeout}")
+    private Long idleTimeout;
+
     @Override
     public Mono<Void> handle(WebSocketSession session) {
         return session.send(session.receive()
+                .timeout(Duration.ofMillis(idleTimeout))
                 .doOnNext(message -> log.info("Received message: {}", message.getPayloadAsText()))
                 .flatMap(message -> Flux.fromStream(IntStream
                         .range(1, 10)

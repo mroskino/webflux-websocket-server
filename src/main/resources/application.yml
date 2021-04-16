@@ -3,3 +3,4 @@ server:
 
 echo:
   response-delay: 1000
+  idle-timeout: 5000
