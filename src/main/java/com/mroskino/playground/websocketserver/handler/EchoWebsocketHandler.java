@@ -11,9 +11,6 @@ import java.time.Duration;
 @Slf4j
 public class EchoWebsocketHandler implements WebSocketHandler {
 
-    @Value("${echo.response-delay}")
-    private Long responseDelay;
-
     @Value("${echo.idle-timeout}")
     private Long idleTimeout;
 
